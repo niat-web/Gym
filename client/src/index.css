@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0F1117;
+    --bg-card: #1A1E29;
+    --accent-lime: #CCFF00;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  html.light body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  html.light .bg-charcoal-950 {
+    background-color: #F1F5F9;
+  }
+
+  html.light .bg-charcoal-900 {
+    background-color: #FFFFFF;
+    border-color: #E2E8F0;
+  }
+
+  html.light .bg-charcoal-850 {
+    background-color: #F8FAFC;
+    border-color: #E2E8F0;
+  }
+
+  html.light .bg-charcoal-800 {
+    background-color: #FFFFFF;
+    border-color: #E2E8F0;
+  }
+
+  html.light .bg-charcoal-750 {
+    background-color: #F1F5F9;
+    border-color: #CBD5E1;
+  }
+
+  html.light .text-white,
+  html.light .text-slate-100,
+  html.light .text-slate-200 {
+    color: #0F172A;
+  }
+
+  html.light .text-slate-300,
+  html.light .text-slate-400 {
+    color: #475569;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A3042;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B435C;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Safe Area Insets for Mobile Devices */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0.5rem);
+}
